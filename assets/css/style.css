@@ -134,6 +134,7 @@ h1 {
 /* *========================================
       * SECTION *
 *======================================== */
+/* ---=== MAIN ===--- */
 main {
   min-height: 100vh;
   display: flex;
@@ -143,7 +144,6 @@ main {
 
 /* ---=== CONTAINER ===--- */
 .container {
-  /* max-width: 38.25rem; */
   max-width: 20.4375rem;
   margin: 81px 1.5rem;
 
@@ -155,14 +155,12 @@ main {
 /* ---=== CARDS ===--- */
 .cards {
   display: grid;
-  /* grid-template-columns: repeat(auto-fill, minmax(min(327px, 100%), 540px)); */
   gap: 1.5rem;
 }
 
 /* ---=== CARD HEADER ===--- */
 .header {
   background-color: var(--clr-navy900-bg);
-  /* min-width: 20.4375rem; */
   height: 12.6875rem;
   border-radius: var(--border-radius-card);
 }
@@ -215,7 +213,6 @@ main {
 /* ---=== CARDS ===--- */
 .card {
   position: relative;
-  /* min-width: 20.4375rem; */
   height: 10rem;
   border-radius: var(--border-radius-card);
   overflow: hidden;
@@ -229,13 +226,17 @@ main {
   background-color: var(--clr-navy900-bg);
   padding: 1.5rem;
   border-radius: var(--border-radius-card);
-  /* corner-shape: squircle; */
   z-index: 10;
   place-content: center;
 
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  transition: background-color 0.5s ease-in-out;
+}
+.card__content:hover {
+  background-color: var(--clr-navy800-bg-active);
 }
 .card__title {
   display: flex;
@@ -263,8 +264,8 @@ main {
 .card__work {
   background: linear-gradient(
     to bottom,
-    var(--clr-orange-work) 60%,
-    var(--clr-navy900-bg)
+    var(--clr-orange-work) 80%,
+    var(--clr-navy900-bg) 20%
   );
 }
 
@@ -272,8 +273,8 @@ main {
 .card__play {
   background: linear-gradient(
     to bottom,
-    var(--clr-bleu300-play) 60%,
-    var(--clr-navy900-bg)
+    var(--clr-bleu300-play) 80%,
+    var(--clr-navy900-bg) 20%
   );
 }
 
@@ -281,8 +282,8 @@ main {
 .card__study {
   background: linear-gradient(
     to bottom,
-    var(--clr-pink400-study) 60%,
-    var(--clr-navy900-bg)
+    var(--clr-pink400-study) 80%,
+    var(--clr-navy900-bg) 20%
   );
 }
 
@@ -290,8 +291,8 @@ main {
 .card__exercise {
   background: linear-gradient(
     to bottom,
-    var(--clr-green400-exercise) 60%,
-    var(--clr-navy900-bg)
+    var(--clr-green400-exercise) 80%,
+    var(--clr-navy900-bg) 20%
   );
 }
 
@@ -299,8 +300,8 @@ main {
 .card__social {
   background: linear-gradient(
     to bottom,
-    var(--clr-purple700-social) 60%,
-    var(--clr-navy900-bg)
+    var(--clr-purple700-social) 80%,
+    var(--clr-navy900-bg) 20%
   );
 }
 
@@ -308,8 +309,8 @@ main {
 .card__self {
   background: linear-gradient(
     to bottom,
-    var(--clr-yellow300-self) 60%,
-    var(--clr-navy900-bg)
+    var(--clr-yellow300-self) 80%,
+    var(--clr-navy900-bg) 20%
   );
 }
 
@@ -330,7 +331,6 @@ main {
 
   /** --- CARDS --- */
   .cards {
-    /* grid-template-columns: repeat(auto-fill, minmax(min(188px, 100%), 1fr)); */
     grid-template-columns: repeat(3, minmax(min(188px, 100%), 1fr));
   }
   .card {
@@ -383,9 +383,6 @@ main {
   .header {
     width: 15.9375rem;
     height: 100%;
-  }
-  .header__content {
-    /* gap: 2rem; */
   }
   .header__profile {
     flex-direction: column;
