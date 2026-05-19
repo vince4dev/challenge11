@@ -1,0 +1,426 @@
+/* *========================================
+      * FONTS *
+*======================================== */
+/* --- rubik-300 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/rubik-v31-latin-300.woff2") format("woff2");
+}
+/* --- rubik-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/rubik-v31-latin-regular.woff2") format("woff2");
+}
+/* --- rubik-500 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/rubik-v31-latin-500.woff2") format("woff2");
+}
+
+/* *========================================
+      * VARIABLES *
+*======================================== */
+:root {
+  /* ---=== color ===--- */
+  /** text */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-navy200-txt: hsl(236, 100%, 87%);
+  --clr-purple500-txt: hsl(235, 45%, 61%);
+
+  /** cards theme */
+  --clr-orange-work: hsl(15, 100%, 70%);
+  --clr-bleu300-play: hsl(195, 74%, 62%);
+  --clr-pink400-study: hsl(348, 100%, 68%);
+  --clr-green400-exercise: hsl(145, 58%, 55%);
+  --clr-purple700-social: hsl(264, 64%, 52%);
+  --clr-yellow300-self: hsl(43, 84%, 65%);
+
+  /** background */
+  --clr-navy950-bg: hsl(226, 43%, 10%);
+  --clr-navy900-bg: hsl(235, 46%, 20%);
+  --clr-navy800-bg-active: hsl(235, 41%, 34%);
+  --clr-purple600-bg: hsl(246, 80%, 60%);
+
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-grey-200: hsl(0, 0%, 85%);
+
+  /* ---=== fonts ===--- */
+  /** fonts size  */
+  --fs-15: 0.9375rem;
+  --fs-18: 1.125rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-56: 3.5rem;
+
+  /** fonts weight */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /** border-radius  */
+  --border-radius-card: 0.9375rem;
+}
+
+/* *========================================
+      * RESET *
+*======================================== */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* *========================================
+      * BASE *
+*======================================== */
+body {
+  background-color: var(--clr-navy950-bg);
+  color: var(--clr-white);
+  font-family: "Rubik", Arial, Helvetica, sans-serif;
+  font-size: var(--fs-18);
+  line-height: 21px;
+}
+
+h1 {
+  font-size: var(--fs-18);
+  font-weight: var(--fw-medium);
+  line-height: 21px;
+}
+
+.icon {
+  position: absolute;
+  right: 20px;
+  top: -5px;
+  transform: scale(1.2);
+}
+
+/* *========================================
+      * SECTION *
+*======================================== */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---=== CONTAINER ===--- */
+.container {
+  /* max-width: 38.25rem; */
+  max-width: 20.4375rem;
+  margin: 81px 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ---=== CARDS ===--- */
+.cards {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(min(327px, 100%), 540px)); */
+  gap: 1.5rem;
+}
+
+/* ---=== CARD HEADER ===--- */
+.header {
+  background-color: var(--clr-navy900-bg);
+  /* min-width: 20.4375rem; */
+  height: 12.6875rem;
+  border-radius: var(--border-radius-card);
+}
+.header__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.header__profile {
+  background-color: var(--clr-purple600-bg);
+  padding: 2rem;
+  border-radius: var(--border-radius-card);
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.header__profile img {
+  border: 3px solid var(--clr-white);
+  border-radius: 100%;
+}
+.header__name {
+  font-size: var(--fs-24);
+  font-weight: var(--fw-light);
+  line-height: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.header__name span {
+  font-size: var(--fs-15);
+  line-height: 1.125rem;
+  color: var(--clr-navy200-txt);
+}
+.header__menu {
+  margin: auto;
+}
+.header__list {
+  color: var(--clr-purple500-txt);
+
+  display: flex;
+  justify-content: space-around;
+  min-width: 20.4375rem;
+}
+.header__menu .weekly {
+  color: var(--clr-white);
+}
+
+/* ---=== CARDS ===--- */
+.card {
+  position: relative;
+  /* min-width: 20.4375rem; */
+  height: 10rem;
+  border-radius: var(--border-radius-card);
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card__content {
+  height: 7.625rem;
+  background-color: var(--clr-navy900-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius-card);
+  /* corner-shape: squircle; */
+  z-index: 10;
+  place-content: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.card__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__stats p {
+  font-size: var(--fs-32);
+  font-weight: var(--fw-light);
+  line-height: 2.375rem;
+}
+.card__stats span {
+  font-size: var(--fs-15);
+  font-weight: var(--fw-regular);
+  line-height: 1.125rem;
+  color: var(--clr-navy200-txt);
+}
+
+/* ---=== CARD WORK ===--- */
+.card__work {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-orange-work) 60%,
+    var(--clr-navy900-bg)
+  );
+}
+
+/* ---=== CARD PLAY ===--- */
+.card__play {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-bleu300-play) 60%,
+    var(--clr-navy900-bg)
+  );
+}
+
+/* ---=== CARD STUDY ===--- */
+.card__study {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-pink400-study) 60%,
+    var(--clr-navy900-bg)
+  );
+}
+
+/* ---=== CARD EXERCISE ===--- */
+.card__exercise {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-green400-exercise) 60%,
+    var(--clr-navy900-bg)
+  );
+}
+
+/* ---=== CARD SOCIAL ===--- */
+.card__social {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-purple700-social) 60%,
+    var(--clr-navy900-bg)
+  );
+}
+
+/* ---=== CARD SELF CARE ===--- */
+.card__self {
+  background: linear-gradient(
+    to bottom,
+    var(--clr-yellow300-self) 60%,
+    var(--clr-navy900-bg)
+  );
+}
+
+/* *========================================
+      * MEDIA *
+*======================================== */
+/* ---=== TABLET ===--- */
+@media (min-width: 768px) {
+  /** --- CONTAINER --- */
+  .container {
+    max-width: 38.25rem;
+  }
+
+  /** --- HEADER --- */
+  .header__menu {
+    width: 21.4375rem;
+  }
+
+  /** --- CARDS --- */
+  .cards {
+    /* grid-template-columns: repeat(auto-fill, minmax(min(188px, 100%), 1fr)); */
+    grid-template-columns: repeat(3, minmax(min(188px, 100%), 1fr));
+  }
+  .card {
+    height: 213px;
+  }
+  .card__content {
+    height: 180px;
+    gap: 1rem;
+  }
+
+  .card__title img {
+    scale: 0.8;
+  }
+  .card__stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .card__stats p {
+    font-size: var(--fs-56);
+    font-weight: var(--fw-light);
+    line-height: 4.125rem;
+  }
+  .card__exercise > img {
+    transform: scale(0.8);
+    top: -5px;
+  }
+  .card__social > img {
+    transform: scale(0.8);
+    top: -20px;
+  }
+  .icon {
+    top: -15px;
+    right: 8px;
+    transform: scale(0.8);
+  }
+}
+
+/* ---=== DESKTOP ===--- */
+@media (min-width: 1440px) {
+  /** --- CONTAINER --- */
+  .container {
+    max-width: 69.75rem;
+
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  /** --- HEADER --- */
+  .header {
+    width: 15.9375rem;
+    height: 100%;
+  }
+  .header__content {
+    /* gap: 2rem; */
+  }
+  .header__profile {
+    flex-direction: column;
+    height: 354px;
+
+    align-items: start;
+    gap: 40px;
+  }
+  .header__profile img {
+    width: 78px;
+    height: 78px;
+  }
+  .icon {
+    transform: scale(1);
+  }
+
+  .header__name p {
+    font-size: var(--fs-40);
+    font-weight: var(--fw-light);
+    line-height: 47px;
+  }
+  .header__menu {
+    margin-left: 2rem;
+  }
+  .header__list {
+    flex-direction: column;
+    gap: 1.3125rem;
+  }
+
+  /** --- CARDS --- */
+  .card {
+    width: 255px;
+    height: 244px;
+  }
+  .card__content {
+    height: 199px;
+  }
+}
