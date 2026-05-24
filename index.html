@@ -40,11 +40,10 @@
                 </div>
               </div>
               <div class="header__menu">
-                <div class="header__list">
-                  <a id="btn-daily" href="">Daily</a>
-                  <a id="btn-weekly" class="active" href="">Weekly</a>
-                  <a id="btn-monthly" href="">Monthly</a>
-                </div>
+                <!-- <div class="header__btn"> -->
+                <button class="btn" data-period="daily">Daily</button>
+                <button class="btn" data-period="weekly">Weekly</button>
+                <button class="btn" data-period="monthly">Monthly</button>
               </div>
             </div>
           </div>
@@ -52,7 +51,7 @@
 
         <section class="cards">
           <!-- CARD WORK -->
-          <div class="card__work card">
+          <div class="card__work card" data-category="work">
             <img
               class="icon"
               src="./assets/images/icon-work.svg"
@@ -63,12 +62,13 @@
             <div class="card__content">
               <div class="card__title">
                 <h1>Work</h1>
-                <img
-                  src="./assets/images/icon-ellipsis.svg"
-                  width="21"
-                  height="5"
-                  alt=""
-                />
+                <a href=""
+                  ><img
+                    src="./assets/images/icon-ellipsis.svg"
+                    width="21"
+                    height="5"
+                    alt=""
+                /></a>
               </div>
               <div class="card__stats">
                 <p>32hrs</p>
@@ -78,7 +78,7 @@
           </div>
 
           <!-- CARD PLAY -->
-          <div class="card__play card">
+          <div class="card__play card" data-category="play">
             <img
               class="icon"
               src="./assets/images/icon-play.svg"
@@ -89,12 +89,13 @@
             <div class="card__content">
               <div class="card__title">
                 <h1>Play</h1>
-                <img
-                  src="./assets/images/icon-ellipsis.svg"
-                  width="21"
-                  height="5"
-                  alt=""
-                />
+                <a href="">
+                  <img
+                    src="./assets/images/icon-ellipsis.svg"
+                    width="21"
+                    height="5"
+                    alt=""
+                /></a>
               </div>
               <div class="card__stats">
                 <p>10hrs</p>
@@ -104,7 +105,7 @@
           </div>
 
           <!-- CARD STUDY -->
-          <div class="card__study card">
+          <div class="card__study card" data-category="study">
             <img
               class="icon"
               src="./assets/images/icon-study.svg"
@@ -115,12 +116,13 @@
             <div class="card__content">
               <div class="card__title">
                 <h1>Study</h1>
-                <img
-                  src="./assets/images/icon-ellipsis.svg"
-                  width="21"
-                  height="5"
-                  alt=""
-                />
+                <a href="">
+                  <img
+                    src="./assets/images/icon-ellipsis.svg"
+                    width="21"
+                    height="5"
+                    alt=""
+                /></a>
               </div>
               <div class="card__stats">
                 <p>4hrs</p>
@@ -130,7 +132,7 @@
           </div>
 
           <!-- CARD EXERCISE -->
-          <div class="card__exercise card">
+          <div class="card__exercise card" data-category="exercise">
             <img
               class="icon"
               src="./assets/images/icon-exercise.svg"
@@ -141,12 +143,13 @@
             <div class="card__content">
               <div class="card__title">
                 <h1>Exercise</h1>
-                <img
-                  src="./assets/images/icon-ellipsis.svg"
-                  width="21"
-                  height="5"
-                  alt=""
-                />
+                <a href="">
+                  <img
+                    src="./assets/images/icon-ellipsis.svg"
+                    width="21"
+                    height="5"
+                    alt=""
+                /></a>
               </div>
               <div class="card__stats">
                 <p>4hrs</p>
@@ -156,7 +159,7 @@
           </div>
 
           <!-- CARD SOCIAL -->
-          <div class="card__social card">
+          <div class="card__social card" data-category="social">
             <img
               class="icon"
               src="./assets/images/icon-social.svg"
@@ -167,12 +170,13 @@
             <div class="card__content">
               <div class="card__title">
                 <h1>Social</h1>
-                <img
-                  src="./assets/images/icon-ellipsis.svg"
-                  width="21"
-                  height="5"
-                  alt=""
-                />
+                <a href="">
+                  <img
+                    src="./assets/images/icon-ellipsis.svg"
+                    width="21"
+                    height="5"
+                    alt=""
+                /></a>
               </div>
               <div class="card__stats">
                 <p>5hrs</p>
@@ -182,7 +186,7 @@
           </div>
 
           <!-- CARD SELF CARE -->
-          <div class="card__self card">
+          <div class="card__self card" data-category="selfcare">
             <img
               class="icon"
               src="./assets/images/icon-self-care.svg"
@@ -193,12 +197,13 @@
             <div class="card__content">
               <div class="card__title">
                 <h1>Self Care</h1>
-                <img
-                  src="./assets/images/icon-ellipsis.svg"
-                  width="21"
-                  height="5"
-                  alt=""
-                />
+                <a href="">
+                  <img
+                    src="./assets/images/icon-ellipsis.svg"
+                    width="21"
+                    height="5"
+                    alt=""
+                /></a>
               </div>
               <div class="card__stats">
                 <p>2hrs</p>
@@ -209,5 +214,13 @@
         </section>
       </section>
     </main>
+
+    <!-- LOADING MODAL -->
+    <div id="loadingModal" class="modal-overlay">
+      <div class="modal-content">
+        <div class="spinner"></div>
+        <p id="status">Loading...</p>
+      </div>
+    </div>
   </body>
 </html>
